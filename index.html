@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+       <!-- for icons font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <!-- Popper JS -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+
+ <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="menu">
+
+    <ul class="nav nav-pills nav-justified " role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#weight">WEIGHT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#length">LENGTH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#temp">TEMPERATURE</a>
+            </li>
+    </ul>
+   </div>
+</nav>
+
+<div class="tab-content">
+<div class="container-fluid tab-pane active" style="background-image:linear-gradient( to right bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) " id="weight">
+  <div class="container text-center" >
+ <br><br>
+      <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">WEIGHT CONVERTER</h2><br>
+      <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
+      <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">KILOGRAM:
+           <input type="number" placeholder="Enter weight in kg" oninput="weightconverter1(this.value)" id="kg" class="form-control">
+      </label>
+       <br><br>
+       <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >GRAM:
+           <input type="number" placeholder="Enter weight in gram" oninput="weightconverter2(this.value)" id="gm" class="form-control">
+       </label>
+       <br><br>
+       <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">POUND:
+          <input type="number" placeholder="Enter weight in pound" oninput="weightconverter3(this.value)" id="pd" class="form-control">
+       </label>
+
+      <br><br>
+       <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">OUNCES:
+          <input type="number" placeholder="Enter weight in ounces" oninput="weightconverter4(this.value)" id="oc" class="form-control">
+       </label>
+       
+    <br><br><br><br>
+  </div>
+  </div>
+
+
+
+        <div class="container-fluid  tab-pane fade" style="background-image:linear-gradient( to left bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) " id="length">
+          <div class="container text-center" >
+         <br><br>
+              <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">LENGTH CONVERTER</h2><br>
+              <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
+              <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">METER:
+                   <input type="number" placeholder="Enter length in meter" oninput="lengthconverter1(this.value)" id="m" class="form-control">
+              </label>
+               <br><br>
+               <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >CENTIMETER:
+                   <input type="number" placeholder="Enter length in centimeter" oninput="lengthconverter2(this.value)" id="cm" class="form-control">
+               </label>
+               <br><br>
+               <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">KILOMETER:
+                  <input type="number" placeholder="Enter length in kilometer" oninput="lengthconverter3(this.value)" id="km" class="form-control">
+               </label>
+  
+              <br><br>
+               <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">FEET:
+                  <input type="number" placeholder="Enter weight in feet" oninput="lengthconverter4(this.value)" id="ft" class="form-control">
+               </label>
+
+               <br><br>
+               <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">INCHES:
+                  <input type="number" placeholder="Enter weight in inches" oninput="lengthconverter5(this.value)" id="in" class="form-control">
+               </label>
+
+               
+               <br><br>
+               <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">MILES:
+                  <input type="number" placeholder="Enter weight in miles" oninput="lengthconverter6(this.value)" id="mi" class="form-control">
+               </label>
+               
+            <br><br><br><br>
+          </div>
+          </div>
+        
+
+          <div class="container-fluid tab-pane fade" style="background-image:linear-gradient( to left bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) " id="temp">
+            <div class="container text-center" >
+           <br><br>
+                <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">TEMPERATURE CONVERTER</h2><br>
+                <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
+                <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">CELCIUS:
+                     <input type="number" placeholder="Enter temperature in celcius" oninput="tempconverter1(this.value)" id="ce" class="form-control">
+                </label>
+                 <br><br>
+                 <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >FAHRENHEIT:
+                     <input type="number" placeholder="Enter temp in fahrenhite" oninput="tempconverter2(this.value)" id="fr" class="form-control">
+                 </label>
+                 <br><br>
+                 <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">KELVIN:
+                    <input type="number" placeholder="Enter temperature in kelvin" oninput="tempconverter3(this.value)" id="kv" class="form-control">
+                 </label>
+  
+              <br><br><br><br>
+            </div>
+            </div>
+            </div>
+
+</body>
