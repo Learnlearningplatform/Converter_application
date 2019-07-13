@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Weight Converter</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+       <!-- for icons font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <!-- Popper JS -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+          <div class="container-fluid" style="background-image:linear-gradient( to right bottom, rgba(39, 14, 83, 0.89), rgba(228, 15, 175, 0.836)) ">
+        <div class="container text-center" >
+       <br><br>
+            <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">WEIGHT CONVERTER</h2><br><br>
+            
+            <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">KILOGRAM:
+                 <input type="number" placeholder="Enter weight in kg" oninput="weightconverter1(this.value)" id="kg" class="form-control">
+            </label>
+             <br><br>
+             <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >GRAM:
+                 <input type="number" placeholder="Enter weight in gram" oninput="weightconverter2(this.value)" id="gm" class="form-control">
+             </label>
+             <br><br>
+             <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">POUND:
+                <input type="number" placeholder="Enter weight in pound" oninput="weightconverter3(this.value)" id="pd" class="form-control">
+             </label>
+
+            <br><br>
+             <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">OUNCES:
+                <input type="number" placeholder="Enter weight in ounces" oninput="weightconverter4(this.value)" id="oc" class="form-control">
+             </label>
+             
+<br><br><br><br>
+        </div>
+        </div>
+
+
+
+
+            <script>
+            function weightconverter1(valnum) 
+            {
+               valnum=parseFloat(valnum);
+               document.getElementById("gm").value=valnum*1000; 
+               document.getElementById("pd").value=valnum*2.204; 
+               document.getElementById("oc").value=valnum*35.274; 
+              
+            }
+
+            function weightconverter2(valnum) 
+            {
+               valnum=parseFloat(valnum);
+               document.getElementById("kg").value=valnum/1000; 
+               document.getElementById("pd").value=valnum*0.0022046; 
+               document.getElementById("oc").value=valnum*0.035274; 
+              
+            }
+
+            function weightconverter3(valnum) 
+            {
+               valnum=parseFloat(valnum);
+               document.getElementById("gm").value=valnum/0.0022046; 
+               document.getElementById("kg").value=valnum/2.2046; 
+               document.getElementById("oc").value=valnum*16; 
+              
+            }
+
+            function weightconverter4(valnum) 
+            {
+               valnum=parseFloat(valnum);
+               document.getElementById("gm").value=valnum/0.035274; 
+               document.getElementById("pd").value=valnum*0.0625; 
+               document.getElementById("kg").value=valnum/35.274; 
+              
+            }
+            </script>
+            
+
+    </body>
+   
+</html>
