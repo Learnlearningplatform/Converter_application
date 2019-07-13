@@ -16,11 +16,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-          <div class="container-fluid" style="background-image:linear-gradient( to right bottom, rgba(39, 14, 83, 0.89), rgba(228, 15, 175, 0.836)) ">
+          <div class="container-fluid" style="background-image:linear-gradient( to right bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) ">
         <div class="container text-center" >
        <br><br>
-            <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">WEIGHT CONVERTER</h2><br><br>
-            
+            <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">WEIGHT CONVERTER</h2><br>
+            <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
             <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">KILOGRAM:
                  <input type="number" placeholder="Enter weight in kg" oninput="weightconverter1(this.value)" id="kg" class="form-control">
             </label>
@@ -38,13 +38,80 @@
                 <input type="number" placeholder="Enter weight in ounces" oninput="weightconverter4(this.value)" id="oc" class="form-control">
              </label>
              
-<br><br><br><br>
+          <br><br><br><br>
         </div>
         </div>
 
 
+        <div class="container-fluid" style="background-image:linear-gradient( to left bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) ">
+                <div class="container text-center" >
+               <br><br>
+                    <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">LENGTH CONVERTER</h2><br>
+                    <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
+                    <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">METER:
+                         <input type="number" placeholder="Enter length in meter" oninput="lengthconverter1(this.value)" id="m" class="form-control">
+                    </label>
+                     <br><br>
+                     <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >CENTIMETER:
+                         <input type="number" placeholder="Enter length in centimeter" oninput="lengthconverter2(this.value)" id="cm" class="form-control">
+                     </label>
+                     <br><br>
+                     <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">KILOMETER:
+                        <input type="number" placeholder="Enter length in kilometer" oninput="lengthconverter3(this.value)" id="km" class="form-control">
+                     </label>
+        
+                    <br><br>
+                     <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">FEET:
+                        <input type="number" placeholder="Enter weight in feet" oninput="lengthconverter4(this.value)" id="ft" class="form-control">
+                     </label>
+
+                     <br><br>
+                     <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">INCHES:
+                        <input type="number" placeholder="Enter weight in inches" oninput="lengthconverter5(this.value)" id="in" class="form-control">
+                     </label>
+
+                     
+                     <br><br>
+                     <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">MILES:
+                        <input type="number" placeholder="Enter weight in miles" oninput="lengthconverter6(this.value)" id="mi" class="form-control">
+                     </label>
+                     
+                  <br><br><br><br>
+                </div>
+                </div>
 
 
+
+                <div class="container-fluid" style="background-image:linear-gradient( to left bottom, rgb(39, 14, 83), rgba(228, 15, 175, 0.966)) ">
+                        <div class="container text-center" >
+                       <br><br>
+                            <h2 class=" text-center" style="font-size: 50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:rgb(236, 107, 22)">TEMPERATURE CONVERTER</h2><br>
+                            <p class="text-center" style="font-size:20px;color:whitesmoke;">INPUT ANY OF THE VALUE TO CONVERT</p><br><br>
+                            <label for="kg" style="font-size: 20px;font-family: cursive;color:whitesmoke">CELCIUS:
+                                 <input type="number" placeholder="Enter temperature in celcius" oninput="tempconverter1(this.value)" id="ce" class="form-control">
+                            </label>
+                             <br><br>
+                             <label  style="font-size: 20px;font-family: cursive;color:whitesmoke" >FAHRENHEIT:
+                                 <input type="number" placeholder="Enter temp in fahrenhite" oninput="tempconverter2(this.value)" id="fr" class="form-control">
+                             </label>
+                             <br><br>
+                             <label  style="font-size: 20px;font-family: cursive;color:whitesmoke">KELVIN:
+                                <input type="number" placeholder="Enter temperature in kelvin" oninput="tempconverter3(this.value)" id="kv" class="form-control">
+                             </label>
+              
+                          <br><br><br><br>
+                        </div>
+                        </div>
+        
+
+
+
+
+
+
+
+
+                        
             <script>
             function weightconverter1(valnum) 
             {
@@ -80,6 +147,82 @@
                document.getElementById("pd").value=valnum*0.0625; 
                document.getElementById("kg").value=valnum/35.274; 
               
+            }
+
+
+            function lengthconverter1(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("cm").value=valnum/0.01;
+              document.getElementById("km").value=valnum/1000;  
+              document.getElementById("ft").value=valnum*3.2808; 
+              document.getElementById("in").value=valnum*39.370; 
+              document.getElementById("mi").value=valnum*0.00062137; 
+            }
+
+            function lengthconverter2(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("m").value=valnum/100;
+              document.getElementById("km").value=valnum/100000;  
+              document.getElementById("ft").value=valnum*0.032808; 
+              document.getElementById("in").value=valnum*0.39370; 
+              document.getElementById("mi").value=valnum*0.0000062137; 
+            }
+            function lengthconverter3(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("m").value=valnum*1000;
+              document.getElementById("cm").value=valnum*100000;  
+              document.getElementById("ft").value=valnum*3280.8; 
+              document.getElementById("in").value=valnum*39370; 
+              document.getElementById("mi").value=valnum*0.62137; 
+            }
+            function lengthconverter4(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("m").value=valnum/3.2808;
+              document.getElementById("cm").value=valnum/0.032808;  
+              document.getElementById("km").value=valnum/3280.8; 
+              document.getElementById("in").value=valnum*12; 
+              document.getElementById("mi").value=valnum*0.00018939; 
+            }
+            function lengthconverter5(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("m").value=valnum/39.370;
+              document.getElementById("cm").value=valnum/0.39370;  
+              document.getElementById("km").value=valnum/3280.8; 
+              document.getElementById("ft").value=valnum/39370; 
+              document.getElementById("mi").value=valnum*0.000015783; 
+            }
+            function lengthconverter6(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("m").value=valnum/0.00062137;
+              document.getElementById("cm").value=valnum/0.0000062137;  
+              document.getElementById("km").value=valnum/0.62137; 
+              document.getElementById("ft").value=valnum*5280; 
+              document.getElementById("in").value=valnum*63360; 
+            }
+
+            function tempconverter1(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("fr").value=(valnum*1.8)+32;
+              document.getElementById("kv").value=valnum+273.15;  
+            }
+            function tempconverter2(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("ce").value=(valnum-32)/1.8;
+              document.getElementById("kv").value=((valnum-32)/1.8)+273.15;  
+            }
+            function tempconverter3(valnum)
+            {
+              valnum=parseFloat(valnum);
+              document.getElementById("fr").value=((valnum-273.15)*1.8)+32;
+              document.getElementById("ce").value=valnum-273.15;  
             }
             </script>
             
